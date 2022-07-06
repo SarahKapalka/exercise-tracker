@@ -11,7 +11,7 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html')
 });
-mongoose.connect(process.env.MNG_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://Yooril:90210gonow@cluster0.udaws.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 const userSchema = mongoose.Schema({
  username: {
   type: String,
