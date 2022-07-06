@@ -81,7 +81,7 @@ app.get('/api/users/:id/logs', (req,res)=>{
     }else if(to){
       findobj.date= {"$lte":new Date(to)};
     };
-    if(from&&to){
+    if(from&&to){go
       findobj.date= {"$gte":new Date(from), "$lte":new Date(to)}
     }
     EXR.find(findobj ,{_id:0, __v:0, userId:0}, (err, data)=>{
